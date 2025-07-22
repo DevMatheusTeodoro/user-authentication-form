@@ -1,22 +1,25 @@
 body,html {
     background-color: #252829;
     margin: 0;
-    height: 100dvh;
-    /* Bugando a margin do container */
-    /* overflow: hidden; */
+    overflow: hidden;
     color: white;
     font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .Container {
-    max-width: 400px;
+    min-width: 400px;
     background-color: #181a1b;
     height: 600px;
     border-radius: 8px;
     padding:10px 30px 10px 30px;
-    margin:0px auto 0px auto;
-    top: 5%;
+    margin:30px auto 0px auto;
     position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    
 }
 
 h1 {
@@ -33,6 +36,7 @@ h1 {
     align-items: start;
     position: relative;
     float: left;
+    font-weight: 600;
 }
 
 .PasswordContainer {
@@ -43,10 +47,16 @@ h1 {
     float: left;
     margin-top: 20px;
     margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.Login{
+    display: flex;
+    flex-direction: column;
 }
 
 input {
-    width: 390px;
+    width: 97%;
     height: 30px;
     margin-top: 5px;
     background-color: #343a3b;
@@ -54,13 +64,111 @@ input {
     border-radius: 2px;
     padding-left: 10px;
     color: white;
-    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .MidiaContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    height: 25px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.ButtonsMidia {
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#Facebook {
+    background-color: #0b57bb;
+    border: solid 2px #09489b;
+}
+
+#Google {
+    background-color: #ffffff;
+    border: solid 2px #bebebe;
+}
+
+#Apple {
+    background-color: white;
+    border: solid 2px rgb(214, 214, 214);
+}
+
+#GitHub {
+    background-color: rgb(8, 8, 8);
+    border: solid 2px rgb(0, 0, 0);
+}
+
+.ImagemMidia {
+    width: 20px;
+    height: 20px;
+}
+
+.CheckboxContainer {
+    margin-top: 40px;
+    height: 10px;
+}
+
+.CheckboxContainer label {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin:0;
+    accent-color: #1eff00;
+}
+
+#submitButton {
+    width: 100%;
+    height: 40px;
+    background-color: #00ff15;
+    border: solid 2px #00b10f;
+    font-family: 'Noto Sans', sans-serif;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 1rem;
     margin-top: 20px;
+}
+
+.LinksContainer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+.CreateAccount a {
+    color: #0077ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.HelpSignIn {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .Container {
+        min-width: 330px;
+        height: 100vh;
+        width: 100vh;
+        margin:0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
