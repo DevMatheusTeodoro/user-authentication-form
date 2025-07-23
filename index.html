@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="Container">
+        <p class="ErrorMensager">The username or password is wrong</p>
         <h1>Sign in</h1>
         <div class="Login">
             <div class="UsernameContainer">
@@ -22,17 +23,17 @@
                 <input type="password" id="password" name="password">
             </div>
             <div class="MidiaContainer">
-                <button class="ButtonsMidia" id ="Facebook"><img class="ImagemMidia" src="./assets/facebook.png"/></button>
-                <button class="ButtonsMidia" id ="Google"><img class="ImagemMidia" src="./assets/google.png"/></button>
-                <button class="ButtonsMidia" id ="GitHub"><img class="ImagemMidia" src="./assets/github.png"/></button>
-                <button class="ButtonsMidia" id ="Apple"><img class="ImagemMidia" src="./assets/apple.png"/></button>
+                <a class="ButtonsMidia" id ="Facebook" href="#facebook"><img class="ImagemMidia" src="./assets/facebook.png"/></a>
+                <a class="ButtonsMidia" id ="Google" href="#google"><img class="ImagemMidia" src="./assets/google.png"/></a>
+                <a class="ButtonsMidia" id ="GitHub" href="#github"><img class="ImagemMidia" src="./assets/github.png"/></a>
+                <a class="ButtonsMidia" id ="Apple" href="#apple"><img class="ImagemMidia" src="./assets/apple.png"/></a>
             </div>
             <div class="CheckboxContainer">
                 <input type="checkbox" id="rememberMe" name="rememberMe">
                 <label for="rememberMe">Stay signed in</label>
             </div>
             <div class="ButtonContainer">
-                <button id="submitButton">Sign in</button>
+                <button type="submit" id="submitButton">Sign in</button>
             </div>
             <div class="LinksContainer">
                     <a class="HelpSignIn" href="#">Help, I can't sign in</a>
