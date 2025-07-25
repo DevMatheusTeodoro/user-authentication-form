@@ -11,16 +11,16 @@
 </head>
 <body>
     <form name="formulary" class="Container" onsubmit="return validateForm()">
-        <p class="ErrorMensager">Invalid username or password</p>
         <h1>Sign in</h1>
+        <p class="ErrorMensager">Invalid username or password</p>
         <div class="Login">
             <div class="UsernameContainer">
-                <label for="userName"><span id="userEmptySymbol" style="color: red; display: none;">* </span>Username:</label>
+                <label for="userName">Username<span id="userEmptySymbol" style="color: red; display: none;"> *</span></label>
                 <input type="text" id="userName" name="userName">
                 <p id="userEmpty">Error Mensager</p>
             </div>
             <div class="PasswordContainer">
-                <label for="password"><span id="passwordEmptySymbol" style="color: red; display: none;">* </span>Password:</label>
+                <label for="password">Password<span id="passwordEmptySymbol" style="color: red; display: none;"> *</span></label>
                 <input type="password" id="password" name="password">
                 <p id="passwordEmpty">Error Mensager</p>
             </div>

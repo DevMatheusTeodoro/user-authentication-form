@@ -38,8 +38,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
-    font-weight: 600
+    font-weight: 600;
+    margin-bottom: 100px;
 }
 
 .UsernameContainer {
@@ -59,6 +59,7 @@ h1 {
     font-weight: 100;
     display: none;
     font-size: 0.8rem;
+    margin-left: 0;
 }
 
 #passwordEmpty {
@@ -68,6 +69,7 @@ h1 {
     font-weight: 100;
     display: none;
     font-size: 0.8rem;
+    margin-left: 0;
 }
 
 .PasswordContainer {
@@ -232,17 +234,14 @@ input[type="checkbox"] {
 }
 
 .ErrorMensager {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
     height: 30px;
     padding: 10px 10px 0px 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 3px;
-    top: 5%;
-    display: none;
     font-weight: 600;
+    display: none;
+    position: absolute;
+    top: 12%;
 }
 
 .AdminContainer {
@@ -289,7 +288,8 @@ input[type="checkbox"] {
         left: auto;
         right: auto;
         width: 200px;
-        height: 80px;
+        height: 30px;
+        padding-top: 10px;
         font-size: 0.8rem;
         line-height: normal;
     }
@@ -305,21 +305,21 @@ input[type="checkbox"] {
     }
 
     .AdminContainer > p:nth-child(4) {
-        margin-top: 5px;
+        display: none;
     }
 
     .ErrorMensager {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
     height: 30px;
     padding: 10px 10px 0px 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 3px;
-    top: 15%;
     display: none;
     font-weight: 600;
+    position: relative;
+    top: 0;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
     }
 
     #passwordEmpty,#userEmpty {
@@ -328,5 +328,11 @@ input[type="checkbox"] {
 
     .CreateAccount{
         margin: 20px 0 0 0;
+    }
+
+    h1 {
+        margin-top: 85px;
+        margin-bottom: 40px;
+        position: relative;
     }
 }
