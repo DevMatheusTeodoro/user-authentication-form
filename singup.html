@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signUpStyle.css">
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+</head>
+<body>
+    <form name="formulary" class="Container" onsubmit="return validateForm()">
+        <h1>Register</h1>
+        <div class="Login">
+            <div class="UsernameContainer">
+                <label for="userName">Username</label>
+                <input type="text" id="userName" name="userName" placeholder="username" required>
+                <p id="userError">Username must be at least 3 letters or numbers.</p>
+            </div>
+            <div class="EmailContainer">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+                <p id="emailError">Enter a valid email address.</p>
+            </div>
+            <div class="PasswordContainer">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="password" required>
+                <p id="passwordError">Password must be at least 6 characters.</p>
+            </div>
+            <div class="PasswordContainer">
+                <label for="passwordConfirm"><span id="passwordEmptySymbol2" style="color: red; display: none;">* </span>Confirm Password</label>
+                <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="repeat password" required>
+                <p id="passwordConfirmError">Passwords do not match.</p>
+            </div>
+            <div class="CheckboxContainer">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I accept the <a class="TermsAndConditions" href="#">Terms and Conditions</a></label>
+            </div>
+            <div class="ButtonContainer">
+                <button type="submit" id="submitButton" >Register</button>
+            </div>
+            <div class="LinksContainer">
+                    <p class="CreateAccount">Already have a Account? <a href="index.html">Sign In</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

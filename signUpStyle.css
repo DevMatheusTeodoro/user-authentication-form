@@ -38,8 +38,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
-    margin-bottom: 100px;
+    font-weight: 600
 }
 
 .UsernameContainer {
@@ -49,27 +48,17 @@ h1 {
     position: relative;
     float: left;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
-#userEmpty {
-    color: red;
-    position: absolute;
-    top: 80%;
-    font-weight: 500;
-    display: none;
-    font-size: 0.8rem;
-    margin-left: 0;
-}
-
-#passwordEmpty {
-    color: red;
-    position: absolute;
-    top: 80%;
-    font-weight: 500;
-    display: none;
-    font-size: 0.8rem;
-    margin-left: 0;
+.EmailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    float: left;
+    font-weight: 600;
+    margin-bottom: 25px;
 }
 
 .PasswordContainer {
@@ -78,9 +67,48 @@ h1 {
     align-items: start;
     position: relative;
     float: left;
-    margin-top: 20px;
-    margin-bottom: 30px;
     font-weight: 600;
+    margin-bottom: 25px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+#userError {
+    color: red;
+    position: absolute;
+    top: 80%;
+    font-weight: 100;
+    display: none;
+    font-size: 0.8rem;
+}
+
+#emailError {
+    color: red;
+    position: absolute;
+    top: 80%;
+    font-weight: 100;
+    display: none;
+    font-size: 0.8rem;
+}
+
+#passwordError {
+    color: red;
+    position: absolute;
+    top: 80%;
+    font-weight: 100;
+    display: none;
+    font-size: 0.8rem;
+}
+
+#passwordConfirmError {
+    color: red;
+    position: absolute;
+    top: 80%;
+    font-weight: 100;
+    display: none;
+    font-size: 0.8rem;
 }
 
 .Login{
@@ -101,14 +129,6 @@ input {
     letter-spacing: 0.5px;
 }
 
-.MidiaContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    height: 30px;
-    margin-top: 10px;
-}
-
 .ButtonsMidia {
     border-radius: 10px;
     align-items: center;
@@ -116,50 +136,8 @@ input {
     display: flex;
 }
 
-#Facebook {
-    background-color: #0b57bb;
-    border: solid 2px #09489b;
-}
-#Facebook:hover {
-    background-color: #0d63d3;
-    border: solid 2px #0b58bd;
-}
-
-#Google {
-    background-color: #ffffffe7;
-    border: solid 2px #bebebe;
-}
-#Google:hover {
-    background-color: #ffffff;
-    border: solid 2px #bebebe;
-}
-
-#Apple {
-    background-color: #ffffffe7;
-    border: solid 2px #bebebe;
-}
-#Apple:hover {
-    background-color: #ffffff;
-    border: solid 2px #bebebe;
-}
-
-#GitHub {
-    background-color: rgba(8, 8, 8, 0.671);
-    border: solid 2px rgba(0, 0, 0, 0.61);
-}
-
-#GitHub:hover {
-    background-color: rgb(8, 8, 8);
-    border: solid 2px rgb(0, 0, 0);
-}
-
-.ImagemMidia {
-    width: 20px;
-    height: 20px;
-}
-
 .CheckboxContainer {
-    margin-top: 40px;
+    margin: 0;
     padding-bottom: 5px;
     display: flex;
     align-items: center;
@@ -174,6 +152,17 @@ input {
 }
 .CheckboxContainer label:hover {
     color: #ffffff;
+}
+
+.TermsAndConditions {
+    color: #006effbd;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.TermsAndConditions a:hover {
+    color: #0066ff;
 }
 
 input[type="checkbox"] {
@@ -204,7 +193,7 @@ input[type="checkbox"] {
 }
 
 .LinksContainer {
-    margin-top: 40px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,50 +212,6 @@ input[type="checkbox"] {
     color: #0066ff;
 }
 
-.HelpSignIn {
-    color: #ffffffd7;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.HelpSignIn:hover {
-    color: #ffffff;
-}
-
-.ErrorMensager {
-    height: 30px;
-    padding: 10px 10px 0px 10px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 3px;
-    font-weight: 600;
-    display: none;
-    position: absolute;
-    top: 12%;
-}
-
-.AdminContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 37%;
-    left: 68%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.288);
-    color: white;
-    border-radius: 8px;
-    line-height: 0;
-    font-family: 'Noto Sans', sans-serif;
-    padding: 10px;
-    height: auto;
-    padding-top: 0;
-    height: 150px;
-    border: solid 1px #006effbd;
-}
-
-.AdminContainer h1,p {
-    margin: 15px;
-}
 
 @media screen and (max-width: 1024px) {
     .Container {
@@ -288,8 +233,7 @@ input[type="checkbox"] {
         left: auto;
         right: auto;
         width: 200px;
-        height: 30px;
-        padding-top: 10px;
+        height: 80px;
         font-size: 0.8rem;
         line-height: normal;
     }
@@ -305,34 +249,28 @@ input[type="checkbox"] {
     }
 
     .AdminContainer > p:nth-child(4) {
-        display: none;
+        margin-top: 5px;
     }
 
     .ErrorMensager {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
     height: 30px;
     padding: 10px 10px 0px 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 3px;
+    top: 15%;
     display: none;
     font-weight: 600;
-    position: relative;
-    top: 0;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
     }
 
-    #passwordEmpty,#userEmpty {
+    #passwordError,#userError {
     top: 100%;
     }
 
     .CreateAccount{
         margin: 20px 0 0 0;
-    }
-
-    h1 {
-        margin-top: 85px;
-        margin-bottom: 40px;
-        position: relative;
     }
 }
