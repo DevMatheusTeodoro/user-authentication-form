@@ -60,13 +60,28 @@ function CheckPasswordConfirm() {
     }
 }
 
+function CheckTerms() {
+    let termsChecked = document.getElementById("terms").checked;
+    if (!termsChecked) {
+        document.getElementById("terms").style.background = "red";
+        return false;
+    }
+    return true;
+}
+
 function validateForm() {
     CheckUser();
     CheckEmail();
     CheckPassword();
     CheckPasswordConfirm();
-    if (CheckUser() && CheckEmail() && CheckPassword() && CheckPasswordConfirm()) {
-        alert("Form submitted successfully!");
+    CheckTerms();
+    if (CheckUser() && CheckEmail() && CheckPassword() && CheckPasswordConfirm() && CheckTerms()) {
+        localStorage.setItem("userName", document.forms["formulary"]["userName"].value.trim());
+        localStorage.setItem("email", document.forms["formulary"]["email"].value.trim());
+        localStorage.setItem("password", document.forms["formulary"]["password"].value.trim());
+        localStorage.setItem("passwordConfirm", document.forms["formulary"]["passwordConfirm"].value.trim());
+        localStorage.setItem("termsAccepted", document.getElementById("terms").checked);
+        window.location.href = "https://www.google.com";
         return true;
     } else {
         alert("Please correct the errors in the form.");

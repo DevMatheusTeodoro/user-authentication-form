@@ -111,7 +111,7 @@ h1 {
     font-size: 0.8rem;
 }
 
-.Login{
+.Register{
     display: flex;
     flex-direction: column;
     min-width: 350px;
@@ -211,7 +211,6 @@ input[type="checkbox"] {
 .CreateAccount a:hover {
     color: #0066ff;
 }
-
 
 @media screen and (max-width: 1024px) {
     .Container {

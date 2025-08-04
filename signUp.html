@@ -10,9 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 </head>
 <body>
-    <form name="formulary" class="Container" onsubmit="return validateForm()">
+    <form id="formulary" class="Container" onsubmit="return validateForm()">
         <h1>Register</h1>
-        <div class="Login">
+        <div class="Register">
             <div class="UsernameContainer">
                 <label for="userName">Username</label>
                 <input type="text" id="userName" name="userName" placeholder="Enter your username" maxlength="29">
@@ -34,14 +34,14 @@
                 <p id="passwordConfirmError">Passwords do not match.</p>
             </div>
             <div class="CheckboxContainer">
-                <input type="checkbox" id="terms" name="terms">
-                <label for="terms">I accept the <a class="TermsAndConditions" href="#">Terms and Conditions</a></label>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I accept the <a class="TermsAndConditions" href="#">Terms & Conditions</a></label>
             </div>
             <div class="ButtonContainer">
                 <button type="submit" id="submitButton" >Register</button>
             </div>
             <div class="LinksContainer">
-                    <p class="CreateAccount">Already have a Account? <a href="index.html">Sign In</a></p>
+                    <p class="CreateAccount">Already have a Account? <a href="SignIn.html">Sign In</a></p>
             </div>
         </div>
     </form>
