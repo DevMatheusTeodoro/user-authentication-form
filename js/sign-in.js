@@ -50,7 +50,10 @@ function validateForm() {
     document.getElementsByClassName("ErrorMensager")[0].style.background = "#00ac00";
     document.getElementById("password").style.border = "none";
     document.getElementById("userName").style.border = "none";
-    return true;
+    setTimeout(() => {
+      window.location.href = "./home.html";
+    }, 2000);
+    return false;
   }
 
   else if (passwordInput !== "" && userInput !== "") {
@@ -69,5 +72,5 @@ function validateForm() {
     document.getElementById("userName").style.border = "2px solid red";
     return false;
   }
-  return false; // Prevent form submission
+  return false;
 }

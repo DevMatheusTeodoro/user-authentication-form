@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./css/sign-in.css">
+    <script src="./js/sign-in.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 </head>
 <body>
-    <form name="formulary" class="Container" onsubmit="return validateForm()">
+    <form id="formulary" class="Container" onsubmit="return validateForm()">
         <h1>Sign in</h1>
         <p class="ErrorMensager">Invalid username or password</p>
         <div class="Login">
@@ -40,7 +40,7 @@
             </div>
             <div class="LinksContainer">
                     <a class="HelpSignIn" href="#">Help, I can't sign in</a>
-                    <p class="CreateAccount">Don't have an account? <a href="./signUp.html">Create account</a></p>
+                    <p class="CreateAccount">Don't have an account? <a href="./sign-up.html">Create account</a></p>
             </div>
         </div>
         <div class="Footer">

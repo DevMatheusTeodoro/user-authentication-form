@@ -21,7 +21,7 @@ function CheckUser() {
 
 function CheckEmail() {
     let emailInput = document.forms["formulary"]["email"].value.trim();
-    let emailPattern = /^[a-z]+@(gmail|outlook|hotmail|live|icloud|yahoo)\.com$/i;
+    let emailPattern = /^[a-z]|[0-9]+@(gmail|outlook|hotmail|live|icloud|yahoo)\.com$/i;
     if (!emailPattern.test(emailInput)) {
         document.getElementById("emailError").style.display = "block";
         document.getElementById("email").style.border = "2px solid red";
@@ -69,22 +69,28 @@ function CheckTerms() {
     return true;
 }
 
-function validateForm() {
-    CheckUser();
-    CheckEmail();
-    CheckPassword();
-    CheckPasswordConfirm();
-    CheckTerms();
-    if (CheckUser() && CheckEmail() && CheckPassword() && CheckPasswordConfirm() && CheckTerms()) {
-        localStorage.setItem("userName", document.forms["formulary"]["userName"].value.trim());
-        localStorage.setItem("email", document.forms["formulary"]["email"].value.trim());
-        localStorage.setItem("password", document.forms["formulary"]["password"].value.trim());
-        localStorage.setItem("passwordConfirm", document.forms["formulary"]["passwordConfirm"].value.trim());
-        localStorage.setItem("termsAccepted", document.getElementById("terms").checked);
-        window.location.href = "https://www.google.com";
-        return true;
-    } else {
-        alert("Please correct the errors in the form.");
-        return false;
-    }
-}
+ document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("formulary").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const valid =
+            CheckUser() &&
+            CheckEmail() &&
+            CheckPassword() &&
+            CheckPasswordConfirm() &&
+            CheckTerms();
+
+        if (valid) {
+            localStorage.setItem("userName", document.forms["formulary"]["userName"].value.trim());
+            localStorage.setItem("email", document.forms["formulary"]["email"].value.trim());
+            localStorage.setItem("password", document.forms["formulary"]["password"].value.trim());
+            localStorage.setItem("passwordConfirm", document.forms["formulary"]["passwordConfirm"].value.trim());
+            localStorage.setItem("termsAccepted", document.getElementById("terms").checked);
+            setTimeout(() => {
+                window.location.href = "./sign-in.html";
+            }, 5000);
+        } else {
+            alert("Please correct the errors in the form.");
+        }
+    });
+});
