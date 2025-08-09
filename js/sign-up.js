@@ -21,7 +21,7 @@ function CheckUser() {
 
 function CheckEmail() {
     let emailInput = document.forms["formulary"]["email"].value.trim();
-    let emailPattern = /^[a-z]|[0-9]+@(gmail|outlook|hotmail|live|icloud|yahoo)\.com$/i;
+    let emailPattern = /^[a-z0-9._-]{3,}@(gmail|outlook|hotmail|live|icloud|yahoo)\.com$/i;
     if (!emailPattern.test(emailInput)) {
         document.getElementById("emailError").style.display = "block";
         document.getElementById("email").style.border = "2px solid red";
@@ -88,7 +88,7 @@ function CheckTerms() {
             localStorage.setItem("termsAccepted", document.getElementById("terms").checked);
             setTimeout(() => {
                 window.location.href = "./sign-in.html";
-            }, 5000);
+            }, 1000);
         } else {
             alert("Please correct the errors in the form.");
         }
